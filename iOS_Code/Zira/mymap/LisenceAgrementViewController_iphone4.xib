@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LisenceAgrementViewController">
+            <connections>
+                <outlet property="scrollView" destination="GHn-oK-ugp" id="kRO-bR-KQe"/>
+                <outlet property="textView" destination="vG7-Wt-4fY" id="M85-zW-MlA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="J7k-W1-RIY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KG2-OQ-MoY">
+                    <rect key="frame" x="6" y="688" width="194" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="ACCEPT" backgroundImage="BtnBg.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="AcceptBtn:" destination="-1" eventType="touchUpInside" id="HnL-Td-kXU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0At-Yc-JsD">
+                    <rect key="frame" x="211" y="688" width="194" height="46"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="REJECT" backgroundImage="BtnBg.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="RejectBtn:" destination="-1" eventType="touchUpInside" id="nvi-MX-5HL"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GHn-oK-ugp">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="vG7-Wt-4fY">
+                            <rect key="frame" x="0.0" y="46" width="776" height="820"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <string key="text">                  Legal content for riders:
+￼“These Terms of Use (the “Terms”) govern
+ the access or use by you, an individual,
+ from within the United States and its
+ territories and possessions ofabapplications,
+ websites, content, products, and services
+ (the "Services") made available in the United
+ States and its territories and possessions by
+ Company X and its subsidiaries and affiliates
+ (hereinafter collectively referred to as "X").
+ PLEASE READ THESE TERMS CAREFULLY
+ OR USING THE SERVICES. You are entering i 
+ legal contract with X by accepting the 
+ the terms of that contract are state d 
+ must read, agree to, and accept all of 
+ and conditions stated herein and
+ herein by reference. If you do not agree to
+ any of these terms, please do not use the
+ services of X.
+Your access and use of the Services
+ constitutes your agreement to be bound
+ by these Terms, which establishes a
+ contractual relationship between you
+ and X. If you do not agree to these
+ Terms, you ma
+y not access or use the Services. X may
+ immediately terminate these Terms or
+ any Services with respect to you, or
+ generally cease offering or deny access
+ to the Services or any portion thereof,
+ at any time for any reason.
+Supplemental terms may apply to certain
+ Services, such as policies for a
+ particular event, activity or promotion,
+ and such supplemental terms will be
+ disclosed to you in connection with
+ the applicable Services. Supplemental
+ terms are in addition to, and shall
+ be deemed a part of, the
+￼Terms for the purposes of the applicable
+ Services. Supplemental terms shall
+ prevail over these Terms in the
+ event of a conflict with respect
+ to the applicable Services.
+X may amend the Terms related to
+ the Services from time to time.
+ Amendments will be effective upon
+ X's posting of such updated Terms
+ at this location or the amended 
+policies or supplemental terms on
+ the applicable Service. Your continued
+ access or use of the Services after
+ such posting constitutes your consent
+ to be bound by the Terms, as amended.
+￼X is not a transportation provider
+ and does not provide transportation
+ services. The Services constitute a
+ technology platform that enables users
+ of X’s mobile applications or websites
+ provided as part of the Services to 
+arrange and schedule transportation 
+and/or logistics services with third
+ party providers of such services, 
+including independent third party
+ transportation providers and third 
+party logistics providers under
+ agreement with X ("Third Party 
+Providers"). Unless otherwise agreed
+ by X in a separate written agreement
+ with you, the Services are made
+ available solely for your personal
+, noncommercial use.
+YOU ACKNOWLEDGE THAT X DOES NOT
+ PROVIDE TRANSPORTATION OR
+ SERVICES OR FUNCTION AS A
+ TRANSPORTATION CARRIER. XS SERVICES
+ MAY BE USED BY YOU TO REQUEST AND
+ SCHEDULE TRANSPORTATION OR
+ SERVICES WITH THIRD PARTY PROVIDERS,
+ BUT YOU AGREE THAT X HAS NO
+ RESPONSIBILITY OR LIABILITY TO YOU
+ RELATED TO ANY TRANSPORTATION OR
+ LOGISTICS PROVIDED TO YOU BY THIRD
+ PARTY PROVIDERS THROUGH THE USE OF
+ THE SERVICES OTHER THAN AS
+ SET FORTH IN THESE TERMS.
+￼X DOES NOT GUARANTEE THE SUITABILITY,
+ SAFETY OR ABILITY OF THIRD PARTY
+ PROVIDERS. IT IS SOLELY YOUR
+ RESPONSIBILITY TO DETERMINE IF
+ A THIRD PARTY PROVIDER WILL MEET
+ YOUR NEEDS AND EXPECTATIONS. X WILL
+ NOT PARTICIPATE IN DISPUTES BETWEEN
+ YOU AND A THIRD PARTY PROVIDER. BY
+ USING THE SERVICES, YOU
+ THAT YOU MAY BE EXPOSED TO
+ INVOLVING THIRD PARTY PROVIDERS 
+THAT ARE POTENTIALLY UNSAFE,
+ HARMFUL TO MINORS, OR OTHERWISE
+ OBJECTIONABLE, AND THAT USE OF
+ THIRD PARTY PROVIDERS ARRANGED OR
+ SCHEDULED USING THE SERVICES IS AT
+ YOUR OWN RISK AND JUDGMENT. UBER
+ SHALL NOT HAVE ANY LIABILITY ARISING
+ FROM OR IN ANY WAY RELATED TO YOUR
+ TRANSACTIONS OR RELATIONSHIP WITH 
+THIRD PARTY PROVIDERS.
+It is left to the discretion of the
+ third party provider whether to provide
+ transportation services, and left to
+ the YOUR discretion whether the third
+ party provider is safe and meets your needs.
+LICENSE
+Subject to your compliance with these Terms
+, X grants you a limited, non-exclusive,
+ non- sublicensable, revocable, non-
+transferrable license to: (i) access
+ and use the Applications on your personal
+ device solely in connection with your
+ use of the Services; and (ii) access and
+ use any content, information and related
+ materials that may be made available 
+through the Services, in each case solely
+ for your personal, noncommercial use.
+ Any rights not expressly granted herein are 
+reserved by X and X's licensors.
+RESTRICTIONS
+￼You may not: (i) remove any copyright,
+ trademark or other proprietary notices
+ from any portion of the Services; (ii) 
+reproduce, modify, prepare derivative works
+ based upon, distribute, license, lease,
+ sell, resell, transfer, publicly display,
+ publicly perform, transmit, stream,
+ broadcast or otherwise exploit the 
+Services except as expressly permitted 
+by X; (iii) decompile, reverse engineer 
+or disassemble the Services except as 
+may be permitted by applicable law; (iv)
+ link to, mirror or frame any portion of
+ the Services; (v) cause or launch any 
+programs or scripts for the purpose of 
+scraping, indexing, surveying, or otherwise 
+data mining any portion of the Services or
+ unduly burdening or hindering the operation
+ and/or functionality of any aspect of the
+ Services; or (vi) attempt to gain
+ unauthorized access to or impair
+ any aspect of the Services or its 
+related systems or networks.
+THIRD-PARTY SERVICES AND CONTENT
+The Services may be made available
+ or accessed in connection with third
+-party services and content (including
+ advertising) that X does not control
+. You acknowledge that different terms
+ of use and privacy policies may apply
+ to your use of such third-party services
+ and content. X does not endorse such third
+ party services and content and in
+ no event shall X be responsible or
+ liable for any products or services
+ of such third party providers.
+Additionally, Apple Inc., Google, Inc
+., Microsoft Corporation or BlackBerry
+ Limited will be third-party beneficiaries
+ to this contract if you access the
+ Services using Applications developed 
+for Apple iOS, Android, Microsoft Windows,
+ or Blackberry-powered mobile devices,
+ respectively. These third-party
+ beneficiaries are not parties to this
+ contract and are not responsible for
+ the provision or support of the Services
+ in any manner. Your access to the
+￼Services using these devices is subject
+ to terms set forth in the applicable
+ third-party beneficiary's terms of service.
+OWNERSHIP
+The Services and all rights therein
+ are and shall remain X's property
+ or the property of X's licensors.
+ Neither these Terms nor your use
+ of the Services convey or grant
+ to you any rights: (i) in or related
+ to the Services except for the limited
+ license granted above; or (ii) to
+ use or reference in any manner X's 
+company names, logos, product and
+ service names, trademarks or services
+ marks or those of X's licensor.
+￼The Service is not available for
+ use by persons under the age of 18.
+ You may not authorize third
+￼parties to use your Account, and
+ you may not allow persons under
+ the age of 18 to receive transportation
+ or logistics services from Third
+ Party Providers unless they are
+ accompanied by you. You may not
+ assign or otherwise transfer your
+ Account to any other person or entity.
+ You agree to comply with all applicable
+ laws when using the Services, and you 
+ may only use the Services for
+ lawful purposes (e.g., no transport
+ of unlawful or hazardous materials).
+ You will not in your use of the
+ Services cause nuisance, annoyance
+, inconvenience, or property damage,
+ whether to the Third Party Provider
+ or any other party. In certain
+ instances, X may require you to
+ provide proof of identity to
+ access or use the Services,
+ and you agree that you may
+ be denied access or use of
+ the Services if you refuse
+ to provide proof of identity.
+You are responsible for obtaining
+ the data network access necessary
+ to use the Services. Your mobile
+ network's data and messaging rates
+ and fees may apply if you access
+ or use the Services from a 
+wireless-enabled device. You
+ are responsible for acquiring
+ and updating compatible hardware
+ or devices necessary to access
+ and use the Services and 
+Applications and any updates
+￼￼￼￼￼￼￼￼￼￼￼￼
+￼thereto. X does not guarantee
+ that the Services, or any portion
+ thereof, will function on any
+ particular hardware or devices.
+ In addition, the Services may
+ be subject to malfunctions and
+ delays inherent in the use of
+ the Internet and electronic
+ communications.
+￼￼￼You understand that use of the
+ Services may result in payments
+ by you for the services you
+ receive from a Third Party
+Provider ("Charges"). After 
+you have received services 
+obtained through your use of
+ the Service, X will facilitate
+ payment of the applicable 
+Charges on behalf of the Third
+ Party Provider, as such Third
+ Party Provider's limited payment
+ collection agent, using the 
+preferred payment method designated
+ in your account, and will send you
+ a receipt by email. Payment of the
+ Charges in such manner shall
+ be considered the same as 
+payment made directly by you 
+to the Third Party Provider. 
+Charges will be inclusive of 
+applicable taxes where required 
+by law. Charges paid by you are 
+final and non-refundable, unless 
+otherwise determined b
+y X. You retain the right to 
+request lower charges from a 
+Third Party Provider for services
+ received by you from such Third
+ Party Provider at the time you 
+receive such services. X will 
+respond accordingly to any request
+ from a Third Party Provider to
+ modify the charges for a particular
+ service.
+All charges are due immediately 
+and payment will be facilitated 
+by X using the preferred payment 
+method designated in your Account
+. If your primary Account payment
+ method is determined to be expired,
+ invalid or otherwise not able to
+ be charged, you agree that X may,
+ as the Third Party Provider's 
+limited payment collection agent
+, use a secondary payment method
+ in your Account, if available.
+X reserves the right to establish,
+ remove and/or revise Charges for
+ any or all aspects of the Services
+ at any time in X's sole discretion.
+ Further, you acknowledge and agree
+ that Charges applicable in certain
+ geographical areas may increase 
+substantially during times of high
+￼demand of the Services. X will use
+ reasonable efforts to inform you 
+of Charges that may apply, provided
+ that you will be responsible for 
+Charges incurred under your Account 
+regardless of your awareness of such
+ Charges or the amounts thereof. 
+You may elect to cancel your request
+ for Services from a Third Party 
+Provider at any time prior to such 
+Third Party Provider's arrival, in 
+which case you may be charged a 
+cancellation fee.
+This payment structure is intended 
+to fully compensate the Third Party
+ Provider for the services provided.
+ Except with respect to taxicab 
+transportation services requested 
+through the Application, X does not
+ designate any portion of your payment
+ as a tip or gratuity to the Third Party
+ Provider. You understand and agree
+ that, while you are free to provide
+ additional payment as a gratuity to
+ any Third Party Provider who provides
+ you with services obtained through
+ the Service, you are under no obligation
+ to do so. Gratuities are voluntary.
+REPAIR OR CLEANING FEES
+]INDEMNITY
+You agree to indemnify and hold X
+ and its officers, directors, employees
+ and agents, harmless from any and all
+ claims, demands, losses, liabilities,
+ and expenses, including attorneys' fees,
+ arising out of or in connection with: (i)
+ your use of the Services; (ii) your
+ breach or violation of any of these
+ Terms; (iii) X's use of your user 
+content; or (iv) your violation of
+ the rights of any third party, 
+including Third Party Providers.
+ARBITRATION
+The arbitration will be 
+administered by the 
+American Arbitration Association
+ ("AAA") in accordance with the
+ Commercial Arbitration Rules and
+ the Supplementary Procedures 
+for Consumer Related Disputes
+ (the"AAA Rules") then in effect
+, except as modified by this 
+"Dispute Resolution" section.
+ (The AAA Rules are available 
+at www.adr.org/arb_med or by 
+calling the AAA at 1-800-778-7879.)
+ The Federal Arbitration Act will
+ govern the interpretation and 
+enforcement of this Section.
+ARBITRATION LOCATION AND PROCEDURE
+￼Unless you and X otherwise agree,
+ the arbitration will be conducted
+ in the county where you reside.
+ If your claim does not exceed $10,000,
+ then the arbitration will be
+ conducted solely on the basis 
+of documents you and X submit to 
+the arbitrator, unless you request 
+a hearing or the arbitrator determines
+ that a hearing is necessary. If
+ your claim exceeds $10,000, your
+ right to a hearing will be determined
+ by the AAA Rules. Subject to the
+ AAA Rules, the arbitrator will have
+ the discretion to direct a reasonable
+ exchange of information by the parties
+, consistent with the expedited
+ nature of the arbitration.
+
+CHANGES
+
+￼
+￼IN ADDITION TO THE ABOVE,
+ DRIVERS SHOULD ALSO AGREE TO THE                       FOLLOWING:
+“By using the services of X, a driver represents, 
+warrants and agrees that:
+￼ Such driver is at least 21 
+years of age.
+ Such driver possesses a valid
+ driver's license and is authorized
+ to operate a motor vehicle and has 
+all appropriate licenses, approvals 
+and authority to provide transportation
+ to third parties in all jurisdictions
+ in which such driver uses X’s services.
+ Such driver owns, or has the legal
+ right to operate, the vehicle such 
+driver uses when accepting riders, 
+and such vehicle is in good operating
+ condition and meets the industry safety
+ standards and all applicable statutory 
+and state department of motor vehicle 
+requirements for a vehicle of its kind.
+ Such driver is named or scheduled on
+ the insurance policy covering the vehicle
+ such driver uses when accepting riders.
+ Such driver has a valid policy of 
+liability insurance (in coverage amounts
+ consistent with all applicable legal 
+requirements) for the operation of such
+ Driver's vehicle to cover any anticipated
+ losses related to such driver's provision
+ of rides to riders.
+ Such driver will be solely responsible
+ for any and all liability which results
+ from or is alleged as a result of the 
+operation of the vehicle such Driver uses
+ to transport Riders, including, but not 
+limited to personal injuries, death and 
+property damages.
+ In the event of a motor vehicle accident
+ such driver will be solely responsible
+ for compliance with any applicable 
+statutory or department of motor vehicles
+ requirements, and for all necessary 
+contacts with such driver's insurance 
+carrier.
+￼ Such driver will obey all local laws
+ related to the matters set forth 
+herein, and will be solely responsible
+ for any violations of such local laws.
+ Such driver will not make any 
+misrepresentation regarding X or 
+services provided by X or such 
+driver's status as a driver, offer or
+ provide transportation service for 
+profit, as a public carrier or taxi 
+service, charge for rides or otherwise
+ seek non-voluntary compensation 
+from riders, or engage in any other
+ activity in a manner that is 
+inconsistent with such driver's 
+obligations under this Agreement.
+ Such driver will not discriminate
+ or harass anyone on the basis of 
+race, national origin, religion, 
+gender, gender identity, physical 
+or mental disability, medical 
+condition, marital status, age 
+or sexual orientation.
+ Such driver is medically 
+fit to drive in accordance 
+with applicable law.”</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zira24/7 Terms Of Use:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v4f-Ef-yqz">
+                            <rect key="frame" x="80" y="15" width="254" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="290" y="227"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BtnBg.png" width="278" height="33"/>
+    </resources>
+</document>

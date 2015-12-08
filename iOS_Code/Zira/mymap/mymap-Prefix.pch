@@ -1,0 +1,40 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#import "AppDelegate.h"
+
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+#define kappDelegate (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
+
+//#define Kwebservices @"http://112.196.24.205:1075/zira247.asmx"
+
+//#define Kwebservices @"http://websquare-001-site1.smarterasp.net/zira247/zira247.asmx"
+
+//live url
+#define Kwebservices @"http://service.zira247.com/ZiraMobileService.svc"
+//#define Kwebservices @"http://112.196.24.205:821/ZiraMobileService.svc"
+
+//#define Kwebservices @"http://112.196.24.205:802/ZiraMobileService.svc"
+
+
+
+//http://websquare-001-site1.smarterasp.net/zira247/zira247.asmx
+//http://162.13.179.115:1005/zira247.asmx
+//http://websquare-001-site1.smarterasp.net/zira247/zira247.asmx
+//http://websquare-001-site1.smarterasp.net/Service/zira247.asmx
+
+//#define Kwebservices @"http://112.196.24.205:1011/UserRegisteration.asmx"
+//#define Kwebservices @"http://websquare-001-site1.smarterasp.net/Service/zira247.asmx"
