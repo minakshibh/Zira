@@ -362,6 +362,13 @@
 		D9ACFCA11A5A620600F31298 /* ForgotPasswordViewController_iphone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9ACFCA01A5A620600F31298 /* ForgotPasswordViewController_iphone4.xib */; };
 		D9ACFCA31A5A6CA500F31298 /* HomeViewController_iphone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9ACFCA21A5A6CA500F31298 /* HomeViewController_iphone4.xib */; };
 		D9ACFCA51A5ABA0B00F31298 /* DriverMapViewController_iphone4.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9ACFCA41A5ABA0B00F31298 /* DriverMapViewController_iphone4.xib */; };
+		D9AEAB411D34F151000441E6 /* green-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AEAB3F1D34F151000441E6 /* green-marker.png */; };
+		D9AEAB421D34F151000441E6 /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AEAB401D34F151000441E6 /* marker.png */; };
+		D9AEAB471D34F529000441E6 /* url.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AEAB451D34F529000441E6 /* url.png */; };
+		D9AEAB481D34F529000441E6 /* url1.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AEAB461D34F529000441E6 /* url1.png */; };
+		D9AEAB4A1D34F79F000441E6 /* red-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AEAB491D34F79F000441E6 /* red-marker.png */; };
+		D9AF282F1D33B09100180567 /* imgpsh_fullsize.png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF282E1D33B09100180567 /* imgpsh_fullsize.png */; };
+		D9AF28311D33B5E200180567 /* imgpsh_fullsize (1).png in Resources */ = {isa = PBXBuildFile; fileRef = D9AF28301D33B5E200180567 /* imgpsh_fullsize (1).png */; };
 		D9D546C31A2DEF0800464B44 /* ProgressGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D546C21A2DEF0800464B44 /* ProgressGradientView.m */; };
 		D9EBC9C21BF5CB8500226488 /* ios-180X180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9EBC9BD1BF5CB8500226488 /* ios-180X180.jpg */; };
 		D9EBC9C31BF5CB8500226488 /* ios-120X120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D9EBC9BE1BF5CB8500226488 /* ios-120X120.jpg */; };
@@ -844,6 +851,13 @@
 		D9ACFCA01A5A620600F31298 /* ForgotPasswordViewController_iphone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController_iphone4.xib; sourceTree = "<group>"; };
 		D9ACFCA21A5A6CA500F31298 /* HomeViewController_iphone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController_iphone4.xib; sourceTree = "<group>"; };
 		D9ACFCA41A5ABA0B00F31298 /* DriverMapViewController_iphone4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverMapViewController_iphone4.xib; sourceTree = "<group>"; };
+		D9AEAB3F1D34F151000441E6 /* green-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-marker.png"; sourceTree = "<group>"; };
+		D9AEAB401D34F151000441E6 /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
+		D9AEAB451D34F529000441E6 /* url.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = url.png; sourceTree = "<group>"; };
+		D9AEAB461D34F529000441E6 /* url1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = url1.png; sourceTree = "<group>"; };
+		D9AEAB491D34F79F000441E6 /* red-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-marker.png"; sourceTree = "<group>"; };
+		D9AF282E1D33B09100180567 /* imgpsh_fullsize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = imgpsh_fullsize.png; path = ../../../../../../Desktop/imgpsh_fullsize.png; sourceTree = "<group>"; };
+		D9AF28301D33B5E200180567 /* imgpsh_fullsize (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "imgpsh_fullsize (1).png"; path = "../../../../../../Desktop/imgpsh_fullsize (1).png"; sourceTree = "<group>"; };
 		D9D546C11A2DEF0800464B44 /* ProgressGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressGradientView.h; sourceTree = "<group>"; };
 		D9D546C21A2DEF0800464B44 /* ProgressGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressGradientView.m; sourceTree = "<group>"; };
 		D9EBC9BD1BF5CB8500226488 /* ios-180X180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ios-180X180.jpg"; sourceTree = "<group>"; };
@@ -1401,6 +1415,7 @@
 		D9607F2E1A3EF76700256055 /* PayPal Payment classes */ = {
 			isa = PBXGroup;
 			children = (
+				D9AF282E1D33B09100180567 /* imgpsh_fullsize.png */,
 				D9607F2F1A3EF78B00256055 /* PaypalViewController.h */,
 				D9607F301A3EF78B00256055 /* PaypalViewController.m */,
 				D9607F311A3EF78B00256055 /* PaypalViewController.xib */,
@@ -1646,6 +1661,7 @@
 		D983751A1A23403E00DD094B /* Driver Register Module */ = {
 			isa = PBXGroup;
 			children = (
+				D9AF28301D33B5E200180567 /* imgpsh_fullsize (1).png */,
 				D983752A1A23527A00DD094B /* Driver Register Pics */,
 				D983751B1A2340A100DD094B /* DriverRegister1ViewController.h */,
 				D983751C1A2340A100DD094B /* DriverRegister1ViewController.m */,
@@ -1716,6 +1732,11 @@
 				D98374FE1A22F72600DD094B /* Home Screen Images */,
 				D958D77C1A39524900964771 /* Fare Estimate */,
 				D98375111A23069600DD094B /* Setting View Or Edit Profile Pics */,
+				D9AEAB3F1D34F151000441E6 /* green-marker.png */,
+				D9AEAB491D34F79F000441E6 /* red-marker.png */,
+				D9AEAB401D34F151000441E6 /* marker.png */,
+				D9AEAB451D34F529000441E6 /* url.png */,
+				D9AEAB461D34F529000441E6 /* url1.png */,
 				D954E2DC1A1E0CD2005EBA7C /* HomeViewController.h */,
 				D954E2DD1A1E0CD2005EBA7C /* HomeViewController.m */,
 				D954E2DE1A1E0CD2005EBA7C /* HomeViewController.xib */,
@@ -1824,7 +1845,7 @@
 				ORGANIZATIONNAME = Impinge;
 				TargetAttributes = {
 					C9A90CD11A09DB6E00D05148 = {
-						DevelopmentTeam = V82CPX8U6Q;
+						DevelopmentTeam = T5DY39F2BR;
 					};
 					C9A90CEC1A09DB6E00D05148 = {
 						DevelopmentTeam = V82CPX8U6Q;
@@ -1882,6 +1903,7 @@
 				D954E2CC1A1E0CAC005EBA7C /* LoginViewController.xib in Resources */,
 				D94D399C1A5CF03100D3ACA7 /* window_new@2x.png in Resources */,
 				D958D7811A39527000964771 /* FareEstimateViewController.xib in Resources */,
+				D9AEAB421D34F151000441E6 /* marker.png in Resources */,
 				D97052E91A67E66000368979 /* icon5.png in Resources */,
 				D94B80961A84CA9000901E2C /* logo_03.png in Resources */,
 				D96A7ACE1A3AD2440097D0ED /* star_active@2x.png in Resources */,
@@ -1895,6 +1917,7 @@
 				D96287211A48043B004ED6B4 /* checkBox@2x.png in Resources */,
 				D961951D1A5E36010042DC98 /* emailimg@2x.png in Resources */,
 				D961950E1A5E35830042DC98 /* leftarrow.png in Resources */,
+				D9AF282F1D33B09100180567 /* imgpsh_fullsize.png in Resources */,
 				D9687B361A7A560600F02DFF /* 4.png in Resources */,
 				D97DE8011A24A13200C30974 /* headerplain.png in Resources */,
 				D96A7AC11A3AB9950097D0ED /* fare_estimate_btn.png in Resources */,
@@ -1908,6 +1931,7 @@
 				D96195151A5E35B30042DC98 /* passimg.png in Resources */,
 				D9ACFCA31A5A6CA500F31298 /* HomeViewController_iphone4.xib in Resources */,
 				D94D39721A5CEDF100D3ACA7 /* username_img.png in Resources */,
+				D9AEAB4A1D34F79F000441E6 /* red-marker.png in Resources */,
 				D94D39741A5CEE5A00D3ACA7 /* google1@2x.png in Resources */,
 				D95DE15A1A494D0D00FEBC25 /* 2.png in Resources */,
 				D96287231A48043B004ED6B4 /* uncheckBox@2x.png in Resources */,
@@ -1959,6 +1983,7 @@
 				D94D397C1A5CEEC200D3ACA7 /* username_img@2x.png in Resources */,
 				D93533471A35A9F300225D81 /* SeeDriverLocationViewController.xib in Resources */,
 				D96242E01A2759C800012447 /* right_arrow@2x.png in Resources */,
+				D9AEAB481D34F529000441E6 /* url1.png in Resources */,
 				D971295B1A1F0DA2002CD400 /* SelectSourceViewController.xib in Resources */,
 				D96A7ACB1A3AD2270097D0ED /* star.png in Resources */,
 				D983751F1A2340A100DD094B /* DriverRegister1ViewController.xib in Resources */,
@@ -1993,6 +2018,7 @@
 				D944F49E1A400A20002F422E /* star_activebig.png in Resources */,
 				D97260271A41539800B5EE20 /* GoogleWalletSDK.bundle in Resources */,
 				D97052FF1A67F72B00368979 /* 11.png in Resources */,
+				D9AEAB471D34F529000441E6 /* url.png in Resources */,
 				D96287201A48043B004ED6B4 /* checkBox.png in Resources */,
 				D96242DC1A273FBF00012447 /* cross@2x.png in Resources */,
 				D961953B1A5E49030042DC98 /* BtnBg@2x.png in Resources */,
@@ -2031,6 +2057,7 @@
 				D9607F1A1A3EAE4100256055 /* EditDriverProfileViewController.xib in Resources */,
 				D983753A1A2352CC00DD094B /* textfield@2x.png in Resources */,
 				D95030A91A2D77D6009D6363 /* gpp_sign_in_light_icon_pressed.png in Resources */,
+				D9AF28311D33B5E200180567 /* imgpsh_fullsize (1).png in Resources */,
 				D950309F1A2D77D6009D6363 /* gpp_sign_in_light_button_disabled.png in Resources */,
 				D94D39861A5CEF7F00D3ACA7 /* card_credit.png in Resources */,
 				D94D399A1A5CF02100D3ACA7 /* rpick@2x.png in Resources */,
@@ -2047,6 +2074,7 @@
 				D95030A51A2D77D6009D6363 /* gpp_sign_in_light_icon_disabled.png in Resources */,
 				D98375371A2352CC00DD094B /* circle-empty@2x.png in Resources */,
 				D964EF031A25970100964952 /* car_icon.png in Resources */,
+				D9AEAB411D34F151000441E6 /* green-marker.png in Resources */,
 				D95030A81A2D77D6009D6363 /* gpp_sign_in_light_icon_normal@2x.png in Resources */,
 				D98190A51A6696BB00C7C98B /* back_img.png in Resources */,
 				D954E2EB1A1E0CF5005EBA7C /* AddCreditCardViewController.xib in Resources */,
@@ -2280,7 +2308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BrandAsset-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rocky Uppal (T5DY39F2BR)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2297,8 +2325,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishnais.ziraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "cfd9a11d-c304-4b7c-8fc2-a2c240e2839f";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2407,7 +2435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BrandAsset-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rocky Uppal (3R7VB3H8QT)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2424,8 +2452,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishnais.ziraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "61d48738-4ab8-45cc-8f1d-cd8c0104d3db";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2437,7 +2465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "BrandAsset-2";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rocky Uppal (T5DY39F2BR)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2454,8 +2482,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.krishnais.ziraapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "cfd9a11d-c304-4b7c-8fc2-a2c240e2839f";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7s armv7";
 				WRAPPER_EXTENSION = app;
 			};

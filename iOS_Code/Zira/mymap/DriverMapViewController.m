@@ -126,7 +126,7 @@ EditDriverProfileViewController  *editDriverProfileViewObj;
     
     //Add Slider
     
-    [HomeViewOutlet setFrame:CGRectMake(0, 64, 250, 568)];
+    [HomeViewOutlet setFrame:CGRectMake(0, 64, 250, self.view.frame.size.height-64)];
     [self.view addSubview:HomeViewOutlet];
     HomeViewOutlet.hidden=YES;
     [self.view bringSubviewToFront:HomeViewOutlet];
@@ -155,7 +155,7 @@ EditDriverProfileViewController  *editDriverProfileViewObj;
     }
     else
     {
-        mapView = [GMSMapView mapWithFrame: CGRectMake(0,65, self.view.frame.size.width, 600) camera:camera];
+        mapView = [GMSMapView mapWithFrame: CGRectMake(0,65, self.view.frame.size.width, self.view.frame.size.height) camera:camera];
     }
     mapView.settings.compassButton = YES;
     mapView.settings.myLocationButton = YES;
@@ -1257,7 +1257,7 @@ EditDriverProfileViewController  *editDriverProfileViewObj;
                 
             }
         }
-        [mapView removeFromSuperview];
+//        [mapView removeFromSuperview];
         [self viewDidLoad];
         
     }
@@ -1276,6 +1276,7 @@ EditDriverProfileViewController  *editDriverProfileViewObj;
             }
             else
             {
+                [self.navigationController popViewControllerAnimated:true];
                 NSLog(@"%@",userDetailDict);
                 
             }

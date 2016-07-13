@@ -28,6 +28,8 @@ SeeDriverLocationViewController *SeeDriverLocationViewObj;
     DriverImageView.layer.borderColor=[UIColor blackColor].CGColor;
     DriverImageView.layer.borderWidth=1.0;
     
+    cancelRide.layer.cornerRadius = 4.0;
+    
     VechicleImageView.layer.cornerRadius=4;
     VechicleImageView.layer.borderColor=[UIColor blackColor].CGColor;
     VechicleImageView.layer.borderWidth=1.0;
@@ -57,7 +59,7 @@ SeeDriverLocationViewController *SeeDriverLocationViewObj;
 
     [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
-    self.navigationItem.rightBarButtonItem= rightBarButtonItem;
+//    self.navigationItem.rightBarButtonItem= rightBarButtonItem;
 
     
     
@@ -584,6 +586,16 @@ SeeDriverLocationViewController *SeeDriverLocationViewObj;
     }
 }
 
+- (IBAction)cancelRide:(id)sender{
+    UIAlertController *alertController = [UIAlertController  alertControllerWithTitle:@"ZIRA"  message:@"Are you sure you want to cancel the ride?"  preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+         [self CancelRideRequest];
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"no" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
 
 @end

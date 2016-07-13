@@ -65,7 +65,7 @@ ShareViewController           *ShareViewObj;
 -(void)logout
 {
     [kappDelegate ShowIndicator];
-     jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] valueForKey:@"user"],@"useremail",nil];
+     jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:@"asd@asd.com",@"useremail",nil];
     
     jsonRequest = [jsonDict JSONRepresentation];
     NSLog(@"jsonRequest is %@", jsonRequest);
@@ -107,7 +107,7 @@ ShareViewController           *ShareViewObj;
 }
 - (void)viewDidLoad
 {
-  //  [self logout];
+//    [self logout];
     if (VechTypeForRide.length==0)
     {
         VechTypeForRide=@"ZiraE";
@@ -170,6 +170,7 @@ ShareViewController           *ShareViewObj;
     DestinationBtnOutlet.hidden=YES;
     DestinationLabel.hidden=YES;
     Destination_SearchBox.hidden=YES;
+    DropLocation.hidden = YES;
     CrossBtnOutlet.hidden=YES;
     self.navigationItem.hidesBackButton = YES;
 
@@ -233,6 +234,11 @@ ShareViewController           *ShareViewObj;
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%f",self.view.frame.size.height] forKey:@"view_height"];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%f",self.view.frame.size.width] forKey:@"view_width"];
+
+    
+    
     //---menu button
     leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [leftButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -318,7 +324,7 @@ ShareViewController           *ShareViewObj;
         [[NSUserDefaults standardUserDefaults] setValue:@"" forKey:@"SourcePlaceDict"];
         DestinationLabel.hidden=NO;
         Destination_SearchBox.hidden=NO;
-        
+        DropLocation.hidden = NO;
         CrossBtnOutlet.hidden=NO;
         
         NSString *DestinationText=[tempArray objectAtIndex:0];
@@ -474,7 +480,7 @@ ShareViewController           *ShareViewObj;
     }
     else
     {
-        MapView = [GMSMapView mapWithFrame: CGRectMake(0,65, self.view.frame.size.width, 505) camera:camera];
+        MapView = [GMSMapView mapWithFrame: CGRectMake(0,65, self.view.frame.size.width, 525) camera:camera];
     }
     
     MapView.settings.compassButton = YES;
@@ -593,7 +599,7 @@ ShareViewController           *ShareViewObj;
         }
         else
         {
-            [HomeViewOutlet setFrame:CGRectMake(0, 64, 250, 568)];
+            [HomeViewOutlet setFrame:CGRectMake(0, 64, 250, self.view.frame.size.height-64)];
 
         }
     }
@@ -722,6 +728,7 @@ ShareViewController           *ShareViewObj;
     DestinationLabel.text=@"";
     DestinationLabel.hidden=YES;
     Destination_SearchBox.hidden=YES;
+    DropLocation.hidden = YES;
     CrossBtnOutlet.hidden=YES;
 }
 

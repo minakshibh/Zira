@@ -39,6 +39,8 @@ RatingViewController *RatingViewObj;
     waypointStrings_ = [[NSMutableArray alloc]init];
     
     
+    
+    
     NSMutableDictionary *TempDict=[[NSMutableDictionary alloc] init];
     [TempDict setValue:[NSString stringWithFormat:@"%f",current_latitude] forKey:@"DriverLatitude"];
     [TempDict setValue:[NSString stringWithFormat:@"%f",current_longitude] forKey:@"DriverLongitude"];
@@ -58,23 +60,45 @@ RatingViewController *RatingViewObj;
 
     mapView_.delegate = self;
    // self.view = mapView_;
-    mapView_.frame=CGRectMake(0, 0, self.view.frame.size.width, getDirectionBtn.frame.origin.y-40);
+    mapView_.frame=CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height);
     [self.view addSubview:mapView_];
 
-    [self mapMyClick:Originposition];
+    [self mapMyClick:Originposition isOriginCoordinates:YES];
     CLLocationCoordinate2D Destposition = CLLocationCoordinate2DMake([DestinationLat doubleValue],[DestinationLong doubleValue]);
-    [self mapMyClick:Destposition];
+    [self mapMyClick:Destposition isOriginCoordinates:NO];
 }
-- (void)mapMyClick:(CLLocationCoordinate2D)coordinate
+- (void)didTapFitBoundsWithMarkers:(NSArray *)markers
+{
+    GMSCoordinateBounds *bounds = [[GMSCoordinateBounds alloc] init];;
+    
+    for (GMSMarker *marker in markers) {
+        bounds = [bounds includingCoordinate:marker.position];
+    }
+    
+    GMSCameraUpdate *update = [GMSCameraUpdate fitBounds:bounds];
+    [mapView moveCamera:update];
+    [mapView animateToViewingAngle:50];
+}
+- (void)mapMyClick:(CLLocationCoordinate2D)coordinate isOriginCoordinates:(BOOL)isOrigin
 {
     
     CLLocationCoordinate2D position = CLLocationCoordinate2DMake(
                                                                  coordinate.latitude,
                                                                  coordinate.longitude);
-    GMSMarker *marker = [GMSMarker markerWithPosition:position];
-    marker.icon=[UIImage imageNamed:@"car_icon.png"];
-    marker.map = mapView_;
-    [waypoints_ addObject:marker];
+    GMSMarker *marker1 = [GMSMarker markerWithPosition:position];
+    if (isOrigin)
+    {
+        marker1.icon=[UIImage imageNamed:@"green-marker.png"];
+    }
+    else{
+        marker1.icon=[UIImage imageNamed:@"red-marker.png"];
+    }
+    marker1.map = mapView_;
+    [waypoints_ addObject:marker1];
+ 
+ 
+    
+    
     NSString *positionString = [[NSString alloc] initWithFormat:@"%f,%f",
                                 coordinate.latitude,coordinate.longitude];
     [waypointStrings_ addObject:positionString];
@@ -124,6 +148,7 @@ RatingViewController *RatingViewObj;
     //driver can end ride
     if ([ComingFromNotification isEqualToString:@"YES"])
     {
+            getDirectionBtn.hidden = true;
         endRideBtn.hidden=YES;
         //here is rider
     }
@@ -174,6 +199,9 @@ RatingViewController *RatingViewObj;
 
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    
 }
 
 -(void) viewWillDisappear:(BOOL)animated

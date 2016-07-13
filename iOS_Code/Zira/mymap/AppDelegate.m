@@ -239,7 +239,16 @@ static NSString * const kClientID =
 
 -(void)ShowWaitngView
 {
-    DisableBackView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
+
+    NSString * widht = @"0";
+    NSString * height = @"0";
+    if ([[NSUserDefaults standardUserDefaults]valueForKey:@"view_height"] != nil){
+        widht = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"view_width"]];
+        height = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"view_height"]];
+
+    }
+    
+    DisableBackView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width , self.window.frame.size.height)];
     DisableBackView.backgroundColor=[UIColor blackColor];
     DisableBackView.alpha=0.5;
     [self.window addSubview:DisableBackView];
@@ -248,8 +257,8 @@ static NSString * const kClientID =
     NSString * text = @"Please wait while we are searching for a driver...";
     
     
-    UILabel *fromLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 50, 300, 200)];
-    
+    UILabel *fromLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 50, self.window.frame.size.width-20, 200)];
+    fromLabel.textAlignment = NSTextAlignmentCenter;
     fromLabel.text = text;
     fromLabel.font = customFont;
     fromLabel.numberOfLines = 3;
@@ -291,12 +300,12 @@ static NSString * const kClientID =
     else if ([[UIScreen mainScreen] bounds].size.height == 667)
     {
         activityIndicatorObject.center = CGPointMake(207, 250);
-        DisableView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 414, 700)];
+        DisableView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.window.frame.size.width, self.window.frame.size.height)];
 
     }else if ([[UIScreen mainScreen] bounds].size.height == 736)
     {
         activityIndicatorObject.center = CGPointMake(207, 250);
-        DisableView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 414, 800)];
+        DisableView=[[UIView alloc] initWithFrame:CGRectMake(0, 0,  self.window.frame.size.width, self.window.frame.size.height)];
         
 
     }
@@ -348,11 +357,11 @@ static NSString * const kClientID =
             
             if(result1.height == 480)
             {
-                animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 400, 320, 80)];
+                animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
             }
             else
             {
-                animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 60, 320, 80)];
+                animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
             }
         }
         
@@ -396,18 +405,19 @@ static NSString * const kClientID =
         [DriverImgView setImage:myImage];
     
         //progress bar
-        progressBar=[[UIProgressView alloc] initWithFrame:CGRectMake(20, 90, 260, 3)];
+        progressBar=[[UIProgressView alloc] initWithFrame:CGRectMake(20, 90, self.window.frame.size.width-40, 3)];
         
-        ProgressBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 400, 320, 170)];
+        ProgressBarView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-170 - animatedView.frame.size.height-10, self.window.frame.size.width, 170)];
         
         ProgressBarView.backgroundColor=[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f];
-        UILabel *lbl=[[UILabel alloc] initWithFrame:CGRectMake(42, 110, 235, 20)];
+        UILabel *lbl=[[UILabel alloc] initWithFrame:CGRectMake(0, 110, self.window.frame.size.width, 20)];
         lbl.text=@"Touch Anywhere to Accept";
+        lbl.textAlignment = NSTextAlignmentCenter;
         [lbl setFont:[UIFont fontWithName:@"Helvetica Bold" size:18]];
         lbl.textColor=[UIColor blackColor];
         [ProgressBarView addSubview:lbl];
         
-        Timerlbl=[[UILabel alloc] initWithFrame:CGRectMake(130, 20, 60, 60)];
+        Timerlbl=[[UILabel alloc] initWithFrame:CGRectMake(0, 20, self.window.frame.size.width, 60)];
         Timerlbl.text=[NSString stringWithFormat:@"%d",TimerValue];
         Timerlbl.textAlignment = NSTextAlignmentCenter;
         [Timerlbl setFont:[UIFont fontWithName:@"Helvetica Bold" size:50]];
@@ -454,11 +464,11 @@ static NSString * const kClientID =
                 
                 if(result1.height == 480)
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 400, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
                 else
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 490, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0,  self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
             }
             animatedView.backgroundColor=[UIColor whiteColor];
@@ -497,7 +507,7 @@ static NSString * const kClientID =
             [RideEndBtn addTarget:self
                            action:@selector(EndRideButton:)
                  forControlEvents:UIControlEventTouchUpInside];
-            RideEndBtn.frame = CGRectMake(0, 0, 320, 80);
+            RideEndBtn.frame = CGRectMake(0, 0, self.window.frame.size.width, 80);
             [animatedView addSubview:RideEndBtn];
 
         }
@@ -512,11 +522,11 @@ static NSString * const kClientID =
                 CGSize result1 = [[UIScreen mainScreen] bounds].size;
                 if(result1.height == 480)
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 400, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
                 else
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 490, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
             }
             animatedView.backgroundColor=[UIColor whiteColor];
@@ -564,7 +574,7 @@ static NSString * const kClientID =
         }
         
     
-        else if ([messageStr containsString:@"begun"])
+        else if ([messageStr containsString:@"begun"] || [messageStr containsString:@"begin"])
         {
             [animatedView removeFromSuperview];
             
@@ -591,11 +601,11 @@ static NSString * const kClientID =
                 CGSize result1 = [[UIScreen mainScreen] bounds].size;
                 if(result1.height == 480)
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 400, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
                 else
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 490, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
             }
             animatedView.backgroundColor=[UIColor whiteColor];
@@ -624,7 +634,7 @@ static NSString * const kClientID =
             [Pyment addTarget:self
                        action:@selector(PaymentButton:)
              forControlEvents:UIControlEventTouchUpInside];
-            Pyment.frame = CGRectMake(0, 0, 320, 80);
+            Pyment.frame = CGRectMake(0, 0, self.window.frame.size.width, 80);
             [animatedView addSubview:Pyment];
             
         }
@@ -674,14 +684,24 @@ static NSString * const kClientID =
             {
                 [animatedView removeFromSuperview];
 
+                
+                NSString * widht = @"0";
+                NSString * height = @"0";
+                if ([[NSUserDefaults standardUserDefaults]valueForKey:@"view_height"] != nil){
+                    widht = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"view_width"]];
+                    height = [NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults]valueForKey:@"view_height"]];
+                    
+                }
+                
+                
                 CGSize result1 = [[UIScreen mainScreen] bounds].size;
                 if(result1.height == 480)
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 400, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
                 else
                 {
-                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, 490, 320, 80)];
+                    animatedView=[[UIView alloc] initWithFrame:CGRectMake(0, self.window.frame.size.height-80, self.window.frame.size.width, 80)];
                 }
             }
 
@@ -715,7 +735,7 @@ static NSString * const kClientID =
             [DriverDetailsViewBtn addTarget:self
                                      action:@selector(DriverDetailsButton:)
                            forControlEvents:UIControlEventTouchUpInside];
-            DriverDetailsViewBtn.frame = CGRectMake(0, 0, 320, 80);
+            DriverDetailsViewBtn.frame = CGRectMake(0, 0, self.window.frame.size.width, 80);
             [animatedView addSubview:DriverDetailsViewBtn];
             
             DriverInfoStr=messageStr;

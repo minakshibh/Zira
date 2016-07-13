@@ -36,6 +36,8 @@
     IBOutlet UILabel *VechModel;
     IBOutlet UILabel *VechNo;
     
+    IBOutlet UIButton *cancelRide;
+    
     //rating stars
     IBOutlet UIImageView *firstStar;
     IBOutlet UIImageView *secondStar;
@@ -52,6 +54,7 @@
 @property(nonatomic,retain) NSString *DriverDetailStr;
 
 - (IBAction)MessageButtonAction:(id)sender;
+- (IBAction)cancelRide:(id)sender;
 - (IBAction)CallButtonAction:(id)sender;
 - (IBAction)SeeDriverLocationButtonAction:(id)sender;
 - (IBAction)SendBtn:(id)sender;

@@ -164,7 +164,7 @@ static NSString *const kCredentialsButtonAccessibilityIdentifier = @"Credentials
 
 - (void)viewDidLoad
 {
-    [self logout];
+//    [self logout];
     
     //[self.zira swing:NULL];
     //[self.zira expandIntoView:self.view finished:NULL];
@@ -183,11 +183,11 @@ static NSString *const kCredentialsButtonAccessibilityIdentifier = @"Credentials
 //    self.view.backgroundColor=[UIColor colorWithRed:245/255.0f green:247/255.0f blue:238/255.0f alpha:1.0f];
 //
 //    
-//    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"Account"] isEqualToString:@"Login"])
-//    {
-//        [self MoveToHomeView];
-//    }
-//    
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"Account"] isEqualToString:@"Login"])
+    {
+        [self MoveToHomeView];
+    }
+//
 //    //Login with facebook
 //    [self toggleHiddenState:YES];
 //    self.lblLoginStatus.text = @"";
@@ -235,7 +235,7 @@ static NSString *const kCredentialsButtonAccessibilityIdentifier = @"Credentials
 -(void)logout
 {
     [kappDelegate ShowIndicator];
-    jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:@"amrikhappy@yahoo.in",@"useremail",nil];
+    jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:@"z@z.com",@"useremail",nil];
     
   //  jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:@"49",@"riderid",@" Alfa Romeo",@"vehicle_make",@"54",@"vehicle_model",@"2009",@"vehicle_year",@"dsfd4566",@"licensePlateNumber",@"16",@"licensePlateCountry",@"201",@"licensePlateState",@"dasfasd",@"address1",@"adsfadsfdsf",@"address2",@"5",@"city",@"230",@"state",@"136118",@"zipcode",@"asdas+6564d",@"drivingLicenseNumber",@"185",@"drivingLicenseState",@"2010-12-16 00:00:00",@"drivingLicenseExpirationDate",@"19971216",@"dateofbirth",@"asdasdasdasd",@"socialSecurityNumber",@"Img_5c24cca5-8e72-49b5-b96a-03ee74d05e45.png",@"licenseImage",@"Img_30947179-82ee-499f-8722-537fa3221729.png",@"medicalCertificateImage",@"Img_f7c34f15-ccc3-49fb-8cad-c9d62b526f78.png",@"vehicleImage",@"Img_f463f8f6-4921-4abf-b2e5-37ae8e59fc0d.png",@"rcImage",nil];
     NSLog(@"jsonRequest is %@", jsonRequest);

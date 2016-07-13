@@ -57,6 +57,7 @@
     double DestinationLongitude;
     
     IBOutlet UILabel *DestinationLabel;
+     IBOutlet UILabel *DropLocation;
     IBOutlet UIButton *DestinationBtnOutlet;
     IBOutlet UIButton *CrossBtnOutlet;
     

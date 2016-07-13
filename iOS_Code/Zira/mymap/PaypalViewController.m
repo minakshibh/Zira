@@ -164,8 +164,11 @@ static NSString *const kSegueConfirm = @"Confirm";
   //  NSInteger discountedFair=totalFair*DiscountValue/100;
   //  NSInteger FairValueAfterDiscounted=totalFair+discountedFair;
   //  TipLbl.text=[NSString stringWithFormat:@"%ld",(long)discountedFair];
-    TotalFare.text=[NSString stringWithFormat:@"$%@",FareLbl.text];
-
+    
+    NSString* str = [NSString stringWithFormat:@"%@",FareLbl.text];
+    str = [str stringByReplacingOccurrencesOfString:@"$" withString:@""];
+//    TotalFare.text=[NSString stringWithFormat:@"$%@",FareLbl.text];
+    TotalFare.text=[NSString stringWithFormat:@"$%@",str];
 
 
 
@@ -579,19 +582,35 @@ static NSString *const kSegueConfirm = @"Confirm";
     
     NSString* tipStr =[NSString stringWithFormat:@"%@%@",TipTextField.text,string];
     NSInteger tipFare=[tipStr integerValue];
+    //$4.0
     
     NSString *FairValue=FareLbl.text;
+    if ([FairValue rangeOfString:@"$"].location == NSNotFound) {
+        NSLog(@"string does not contain substring");
+    } else {
+        FairValue = [FairValue componentsSeparatedByString:@"$"][1];
+        NSLog(@"string contains substring!");
+    }
+    
+    
     NSInteger normalFare=[FairValue integerValue];
     
-    NSInteger tipAndNormalFare=tipFare+normalFare;
+    NSInteger tipAndNormalFare = tipFare+normalFare;
     
-    TotalFare.text=[NSString stringWithFormat:@"$%ld",(long)tipAndNormalFare];
+    NSString* str = [NSString stringWithFormat:@"%ld",(long)tipAndNormalFare];
+    str = [str stringByReplacingOccurrencesOfString:@"$" withString:@""];
+//    TotalFare.text=[NSString stringWithFormat:@"$%ld",(long)tipAndNormalFare];
+    TotalFare.text=[NSString stringWithFormat:@"$%@",str];
     
     if (range.length==1)
     {
         NSLog(@"BACK");
         TipTextField.text=@"";
-        TotalFare.text=[NSString stringWithFormat:@"$%ld",(long)normalFare];
+        NSString* str = [NSString stringWithFormat:@"%ld",(long)normalFare];
+        str = [str stringByReplacingOccurrencesOfString:@"$" withString:@""];
+
+//        TotalFare.text=[NSString stringWithFormat:@"$%ld",(long)normalFare];
+        TotalFare.text=[NSString stringWithFormat:@"$%@",str];
 
     }
     return YES;
@@ -634,9 +653,15 @@ static NSString *const kSegueConfirm = @"Confirm";
         
         NSInteger FairValueAfterDiscounted=totalFair+discountedFair;
         TipLbl.text=[NSString stringWithFormat:@"$%ld",(long)discountedFair];
-        
     
-        TotalFare.text=[NSString stringWithFormat:@"$%ld",(long)FairValueAfterDiscounted];
+    
+    NSString* str = [NSString stringWithFormat:@"%ld",(long)FairValueAfterDiscounted];
+        str = [str stringByReplacingOccurrencesOfString:@"$" withString:@""];
+
+    NSString* str1 = [NSString stringWithFormat:@"%@",str];
+    str1 = [str1 stringByReplacingOccurrencesOfString:@"$" withString:@""];
+    
+        TotalFare.text=[NSString stringWithFormat:@"$%@",str1];
     
 }
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
@@ -915,6 +940,8 @@ static NSString *const kSegueConfirm = @"Confirm";
            if (result==1)
            {
                UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"Zira24/7" message:[NSString stringWithFormat:@"%@",messageStr] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//               [self.navigationController popViewControllerAnimated:true];
+//               [self.navigationController popViewControllerAnimated:true];
                [alert show];
            }
            else
@@ -985,15 +1012,19 @@ static NSString *const kSegueConfirm = @"Confirm";
     webservice=3;
     if (TripId.length==0)
     {
-        [[NSUserDefaults standardUserDefaults]valueForKey:@"EndRideTripId"];
+       TripId = [[NSUserDefaults standardUserDefaults]valueForKey:@"EndRideTripId"];
     }
     NSString* TipStr = [TipTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSMutableDictionary *jsonDict1 = [[NSMutableDictionary alloc]init];
+    [jsonDict1 setObject:[NSString stringWithFormat:@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"UserId"]] forKey:@"UserId"];
+     [jsonDict1 setObject:TipStr forKey:@"TipAmount"];
+       [jsonDict1 setObject:TripId forKey:@"TripId"];
     
     jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] valueForKey:@"UserId"],@"UserId",TipStr,@"TipAmount",TripId,@"TripId",nil];
     
   //  jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] valueForKey:@"UserId"],@"UserId",@"284",@"TripId",nil];
     
-    jsonRequest = [jsonDict JSONRepresentation];
+    jsonRequest = [jsonDict1 JSONRepresentation];
     NSLog(@"jsonRequest is %@", jsonRequest);
     
     urlString=[NSURL URLWithString:[NSString stringWithFormat:@"%@/DeductPaymentEndRide",Kwebservices]];

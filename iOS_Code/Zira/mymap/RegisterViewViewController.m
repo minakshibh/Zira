@@ -640,8 +640,32 @@ DriverMapViewController        *DriverMapViewObj;
     NSString *ImageCode = [Base64 encode:data];
     
     webservice=1;
+
+    NSLog(@"1212%@",firstNameTextField.text);
+    NSLog(@"2323%@",imageNameStr);
+    NSLog(@"34343%@",LastNameTextField.text);
+    NSLog(@"12454512%@",PasswordTextField.text);
+    NSLog(@"12156552%@",MobileNumber.text);
+
+    if (imageNameStr == nil){
+        imageNameStr = @"";
+    }
     
-    jsonDict=[[NSDictionary alloc]initWithObjectsAndKeys:[[NSUserDefaults standardUserDefaults] valueForKey:@"UserId"],@"userid",EmailTextField.text,@"email",imageNameStr,@"ImageName",firstNameTextField.text,@"firstname",LastNameTextField.text,@"lastname",PasswordTextField.text,@"password",MobileNumber.text,@"phonenumber",@"",@"creditcardnumber",@"",@"creditcardexpiry",@"",@"cvv",nil];
+    
+    NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc]init];
+    [jsonDict setObject:imageNameStr forKey:@"ImageName"];
+    [jsonDict setObject:firstNameTextField.text forKey:@"firstname"];
+    [jsonDict setObject:LastNameTextField.text forKey:@"lastname"];
+    [jsonDict setObject:PasswordTextField.text forKey:@"password"];
+    [jsonDict setObject:MobileNumber.text forKey:@"phonenumber"];
+    [jsonDict setObject:@"" forKey:@"creditcardnumber"];
+    [jsonDict setObject:@"" forKey:@"creditcardexpiry"];
+    [jsonDict setObject:@"" forKey:@"cvv"];
+    [jsonDict setObject:EmailTextField.text forKey:@"email"];
+    [jsonDict setObject:[[NSUserDefaults standardUserDefaults] valueForKey:@"UserId"] forKey:@"userid"];
+    
+
+    
     
     jsonRequest = [jsonDict JSONRepresentation];
     NSLog(@"jsonRequest is %@", jsonRequest);
